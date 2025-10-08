@@ -109,5 +109,4 @@ Airtel, operating at the network level, can analyze call metadata and patterns b
 *   **Cloud Deployment:** Deploy the Streamlit application to a cloud platform (e.g., Streamlit Cloud, AWS, GCP, Azure) for broader accessibility.
 *   **Integration with Messaging APIs:** For SMS, investigate integration with messaging APIs (e.g., Twilio) for a more automated SMS filtering system (acknowledging costs and platform restrictions).
 
----#   S p a m - a n d - F r a u d - M e s s a g e - C a l l - D e t e c t o r  
- 
+---
