@@ -14,13 +14,11 @@ This project utilizes a combination of two publicly available datasets to train 
     *   **Description:** A collection of SMS messages, each tagged as either 'spam' or 'ham' (legitimate).
     *   **Source:** [https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
     *   **Usage:** Provides a rich source of typical SMS spam patterns and legitimate conversational language.
-    `[Placeholder for Screenshot of spam.csv data snippet]`
 
 *   **Fraud Call India Dataset**
     *   **Description:** This dataset aims to classify call transcripts as either 'fraud' or 'normal'. It helps in identifying fraudulent conversations.
     *   **Source:** [https://www.kaggle.com/datasets/narayanyadav/fraud-call-india-dataset](https://www.kaggle.com/datasets/narayanyadav/fraud-call-india-dataset)
     *   **Usage:** Crucial for understanding the linguistic patterns indicative of fraud in a call context, which is then applied to text.
-    `[Placeholder for Screenshot of fraud_call.file data snippet]`
 
 ## 3. Tools & Techniques
 
@@ -54,10 +52,28 @@ The project follows a standard machine learning pipeline:
 3.  **Feature Engineering:** The preprocessed text messages are transformed into numerical feature vectors using `TfidfVectorizer`. This technique assigns scores to words based on their frequency in a document and rarity across the entire dataset, effectively capturing the importance of terms.
 4.  **Model Training:** The vectorized data is split into training and testing sets. A `LinearSVC` classifier is then trained on the training data.
 5.  **Model Evaluation:** The trained model's performance is assessed on the unseen test set using metrics like accuracy, precision, recall, and F1-score, providing insights into its effectiveness.
+    ```
+    Training LinearSVC Classifier...
+    Classifier training complete!
+
+    --- Model Evaluation ---
+    Accuracy: 0.9821
+    Classification Report:
+                   precision    recall  f1-score   support
+
+           fraud       1.00      0.87      0.93       149
+          normal       0.98      1.00      0.99       966
+
+        accuracy                           0.98      1115
+       macro avg       0.99      0.93      0.96      1115
+    weighted avg       0.98      0.98      0.98      1115
+    ```
 6.  **Model Persistence:** The trained `TfidfVectorizer` and `LinearSVC` model are saved as `.pkl` files using `joblib`. This allows the Streamlit application to load the pre-trained model for predictions without needing to retrain it every time.
 7.  **Web Application Development:** A Streamlit application (`app.py`) is built to provide an interactive GUI. Users can input a message, which is then preprocessed, vectorized, and fed into the loaded model to generate a "Normal" or "Fraud/Spam" prediction.
 
-`[Placeholder for Screenshot of Streamlit App GUI]`
+![WhatsApp Image 2025-10-08 at 17 38 39_127c3331](https://github.com/user-attachments/assets/428ee670-9ee8-40c2-8659-3a17d500e998)
+![WhatsApp Image 2025-10-08 at 17 39 40_0317f36e](https://github.com/user-attachments/assets/df105aad-d6d4-4eee-936e-a2313a7f25ff)
+
 
 ## 5. Key Insights
 
