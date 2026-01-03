@@ -1,5 +1,12 @@
 # Spam and Fraud Message / Call Detector
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![NLP](https://img.shields.io/badge/NLP-TF--IDF-yellow)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Linear%20SVM-green)
+![Text Classification](https://img.shields.io/badge/Text%20Classification-Spam%20%26%20Fraud-red)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+
+
 This project implements a **machine learning–based spam and fraud detection system** that classifies incoming messages as either **Normal** or **Fraud/Spam**.  
 The goal is to help users identify potentially harmful communications such as phishing messages, scam SMS, and fraudulent call transcripts.
 
@@ -156,5 +163,6 @@ This project mirrors the **core logic** of such systems at a local application l
 
 This project demonstrates a practical, end-to-end implementation of **spam and fraud detection using NLP and machine learning**.  
 It emphasizes clean data processing, effective feature engineering, and realistic system constraints, making it relevant for real-world applications and further extensions.
+
 
 
